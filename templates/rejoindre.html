@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velorution TN - Rejoignez Nous</title>
+    <link rel="stylesheet" href="../css/rejoindre.css">
+    <link rel="icon" href="../images/icons/bicycle.png">
+</head>
+<body>
+    
+    <header class="head-title">
+        <!--<h1>Velorution TN</h1>-->
+        <a href="../index.html"><img src="../images/logo.png"></a>
+        <nav>
+        </nav>
+    </header>
+
+    <!-- formulaire de rejoindre -->
+
+    <form name="join-form" onsubmit="return validInput()" method="POST" action="../php/rejoindre.php">
+        <h2>Demande de Rejoindre</h2>
+        <div class="info-perso">
+            <input type="text" name="nom_pren" placeholder="nom et prénom">
+            <input type="date" name="date_naiss" placeholder="Date de naissance">
+            <span id="radios">
+                <input type="radio" name="gender" id="H-gender" value="H"><label for="H-gender" id="H-lbl">Homme</label>
+                <input type="radio" name="gender" id="F-gender" value="F"><label for="F-gender" id="F-lbl">Femme</label>
+            </span>
+            <input type="number" name="num_tel" placeholder="Phone number">
+            <input type="email" name="email" placeholder="Adresse email">
+            <select name="ville">
+                <option value="Tunis">Tunis</option>
+                <option value="Bizerte">Bizerte</option>
+            </select>
+        </div>
+        
+        <div class="boutons">
+            <input type="reset" value="Annuler">
+            <input type="submit" value="Valider">
+        </div>
+    </form>
+
+    <!-- footer -->
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Velorution TN</p>
+        </div>
+        <div class="social-media">
+            <a href=""><img src="../images/icons/facebook.png" alt=""></a>
+            <a href=""><img src="../images/icons/instagram.png" alt=""></a>
+            <a href=""><img src="../images/icons/youtube.png" alt=""></a>
+            <a href=""><img src="../images/icons/twitter.png" alt=""></a>
+        </div>
+    </footer>
+    <script src="../scripts/controle.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velorution TN</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/icons/bicycle.png">
+</head>
+<body>
+
+    <header class="head-title">
+        <!--<h1>Velorution TN</h1>-->
+        <img src="images/logo.png">
+        <nav>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#services-section">Services</a></li>
+                <li><a href="#témoignages">Témoignages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="welcome-section" id="head">
+        <div>
+            <h2>LA REVOLUTION TUNISIENNE DU VÉLO EST EN MARCHE</h2>
+            <a href="templates/location.html" class="btn">Louer une vélo</a>
+            <a href="templates/rejoindre.html" class="btn">Rejoignez le club</a>
+        </div>
+        <div>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <h2 class="section-title">À propos de nous</h2>
+        <p>Nous sommes passionnés par le cyclisme et nous croyons en ses bienfaits pour la santé, l'environnement et le bien-être. Notre service de location de vélos et club de cyclisme vise à promouvoir une culture cycliste dynamique dans notre communauté locale.</p>
+        <p>Que vous soyez un cycliste occasionnel à la recherche d'une balade relaxante ou un cycliste passionné désireux de rejoindre un club dynamique, vous êtes au bon endroit ! Nous proposons une large gamme de services pour répondre à vos besoins de cyclisme.</p>
+        <p>Rejoignez-nous dans notre mission de rendre le cyclisme accessible, amusant et enrichissant pour tous !</p>
+    </section>
+
+    <!-- les services -->
+
+    <section id="services-section">
+        <h2 class="section-title">Nos Services</h2>
+        <div class="services">
+            <div class="service">
+                <img src="images/services/velo-qualite.jpg">
+                <div>
+                    <h3>Location de vélos de qualité</h3>
+                </div>
+                <div class="description-service">
+                    <p>Nous proposons une large gamme de vélos de qualité pour tous les types de cyclistes, que ce soit pour des balades en ville, des randonnées sur route ou des aventures en montagne.</p>
+                    <p id="prix">a partir de 2 DT/heure</p>
+                </div>
+            </div>
+            <div class="service">
+                <img src="images/services/guide.jpg">
+                <div>
+                    <h3>Guides professionnels</h3>
+                </div>
+                <div class="description-service">
+                    <p>Nos guides expérimentés sont là pour vous aider à découvrir les meilleurs itinéraires et attractions de la région. Profitez d'une expérience de cyclisme inoubliable en compagnie de nos experts.
+                    </p>
+                    <p id="prix">a partir de 35 DT</p>
+                </div>
+            </div>
+            <div class="service">
+                <img src="images/services/réparation.jpg">
+                <div>
+                    <h3>Ateliers de réparation et d'entretien</h3>
+                </div>
+                <div class="description-service">
+                    <p>Notre équipe de mécaniciens qualifiés est disponible pour vous aider avec toutes vos réparations et entretiens de vélos. Assurez-vous que votre vélo est toujours en parfait état de fonctionnement.</p>
+                    <p id="prix">a partir de 15 DT</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- les avis -->
+    <section id="témoignages" class="avis-section">
+        <h2 class="section-title">Témoignages</h2>
+        <div>
+            <figure class="avis-card">
+                <figcaption>
+                <blockquote>
+                    "Je suis membre du club depuis plusieurs années et j'ai participé à de nombreuses sorties. C'est une expérience formidable ! Les organisateurs font un excellent travail et les membres sont très sympathiques."
+                </blockquote>
+                <h3>Claudia Ben Rejab</h3>
+                <h4>Twitter</h4>
+                </figcaption>
+            </figure>
+            <figure class="avis-card">
+                <figcaption>
+                    <blockquote>
+                        "La location de vélos est très pratique pour moi lorsque je visite la ville. Je peux facilement explorer les environs à mon propre rythme. Les tarifs sont raisonnables et le processus de réservation est simple."
+                    </blockquote>
+                    <h3>Sebastien Leblanc</h3>
+                    <h4>Facebook</h4>
+                </figcaption>
+            </figure>
+            <figure class="avis-card last-card">
+                <figcaption>
+                <blockquote>
+                    "J'ai découvert des paysages incroyables et rencontré de nouveaux amis grâce aux sorties organisées par le club de cyclisme. C'est une expérience fantastique qui enrichit ma vie et me permet de vivre ma passion pour le vélo pleinement."                </blockquote>
+                <h3>Montassar Talbi</h3>
+                <h4>Facebook</h4>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- contact & newsletter -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="divider">
+            <div class="contact-info">
+                <div class="micro-info">
+                    <img src="images/icons/mobile.png" alt="">
+                    <label>+216 96 345 234</label>
+                </div>
+                <div class="micro-info">
+                    <img src="images/icons/fix.png" alt="">
+                    <label>74 567 235</label>
+                </div>
+                <div class="micro-info">
+                    <img src="images/icons/email.png" alt="">
+                    <label>velorutiontn@gmail.com</label>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <form name="newsletter-form" onsubmit="return validEmail(document.getElementsByName('email')[0].value)"  method="POST" action="php/newsletter.php">
+                    <label>S'inscrire a notre newsletter</label>
+                    <div>
+                        <input type="email" name="email" placeholder="Adresse email">
+                        <input type="submit" value="S'inscrire">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- bouton pour revenir au top du page-->
+
+    <a id="scrollToTopBtn" href="#head" title="Go to top">
+        <img src="images/icons/arrow-up.png">
+    </a>
+
+    <!-- footer -->
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Velorution TN</p>
+        </div>
+        <div class="social-media">
+            <a href=""><img src="images/icons/facebook.png" alt=""></a>
+            <a href=""><img src="images/icons/instagram.png" alt=""></a>
+            <a href=""><img src="images/icons/youtube.png" alt=""></a>
+            <a href=""><img src="images/icons/twitter.png" alt=""></a>
+        </div>
+    </footer>
+
+    <script src="scripts/controle.js"></script>
+
+</body>
+
+</html>

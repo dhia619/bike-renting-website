@@ -1,0 +1,105 @@
+/* variables */
+:root{
+    --bg-color:#EAEAEA;
+    --sec-bg-color:#252A34;
+    --fg1-color:#FF2E63;
+    --fg2-color:#08D9D6;
+  }
+  
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+}
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+body{
+    background-color: var(--sec-bg-color);
+    font-family: Montserrat;
+    overflow-x: hidden;
+}
+
+/* header */
+.head-title {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color);
+    color: var(--sec-bg-color);
+    padding: 5px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+header img {
+    width: 200px;
+    cursor: pointer;
+}
+
+.result_container,.dispo_result_container,.indispo_result_container{
+    position: relative;
+    padding:20px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+    width: 30vw;
+    color: var(--sec-bg-color);
+    font-family: Montserrat;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.result_container,.indispo_result_container{
+    top:30vh;
+}
+
+.dispo_result_container{
+    top:15vh;
+}
+
+#montant{
+    color:var(--fg1-color);
+}
+
+#date_loc{
+    color:#27AE60;
+}
+
+#carte{
+    margin: auto;
+    position: relative;
+    top:20vh;
+    width: fit-content;
+    z-index: 99;
+}
+
+/* footer */
+
+footer{
+    background-color: var(--bg-color);
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--sec-bg-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 98vw;
+    height: fit-content;
+}
+
+.social-media{
+    background-color: var(--bg-color);
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4,35px);
+    border-radius: 10px;
+    width: fit-content;
+}

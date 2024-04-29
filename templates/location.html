@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velorution TN - Location</title>
+    <link rel="stylesheet" href="../css/location.css">
+    <link rel="icon" href="../images/icons/bicycle.png">
+</head>
+<body>
+  <!-- multistep form -->
+  <form id="msform"  onsubmit="return paiementValide()" method="POST" action="../php/location.php">
+      <!-- progressbar -->
+      <ul id="progressbar">
+        <li class="active">Détails Personnels</li>
+        <li>Dates et Durée</li>
+        <li>Détails vélo</li>
+        <li>Paiement</li>
+      </ul>
+      <!-- fieldsets -->
+      <fieldset>
+        <h2 class="fs-title">Informations Personnels</h2>
+        <h3 class="fs-subtitle">Etape 1</h3>
+        <input type="email" name="email" placeholder="Addresse Email" />
+        <input type="text" name="nom_pren" placeholder="Nom et Prénom" />
+        <input type="number" name="num_tel" placeholder="Numéro de télephone">
+        <input type="date" name="date_naiss" placeholder="date de naissance" />
+        <input type="reset" name="annuler" class="reset action-button" value="Annuler" />
+        <input type="button" name="next" class="next action-button" value="Suivant" />
+      </fieldset>
+      <fieldset>
+        <h2 class="fs-title">Détails Location</h2>
+        <h3 class="fs-subtitle">Etape 2</h3>
+        <label>Date Location</label>
+        <input type="date" name="date_loc" class="date"/>
+        <input type="time" name="heure_loc"class="duree" value="08:00"/>
+        <label>Date Retour</label>
+        <input type="date" name="date_ret" class="date"/>
+        <input type="time" name="heure_ret" class="duree" value="08:00"/>
+        <input type="button" name="prec" class="previous action-button" value="Précédent" />
+        <input type="button" name="suiv" class="next action-button" value="Suviant" />
+      </fieldset>
+      <fieldset>
+        <h2 class="fs-title">Détails Vélo</h2>
+        <h3 class="fs-subtitle">Etape 3</h3>
+        <label>Type</label>
+        <select name="typeV">
+          <option value="course">Vélo de course</option>
+          <option value="route">Vélo de Route</option>
+          <option value="bmx">BMX</option>
+          <option value="Hollondais">Hollondais</option>
+        </select>
+        <label>Couleur</label>
+        <select name="colV">
+          <option value="noir">Noir</option>
+          <option value="metal">Métalique</option>
+          <option value="jaune">Jaune</option>
+          <option value="vert">Vert</option>
+        </select>
+        <input type="button" name="prec" class="previous action-button" value="Précédent" />
+        <input type="button" name="suiv" class="next action-button" value="Suviant" />
+      </fieldset>
+      <fieldset class="paiement-field">
+        <h2 class="fs-title">Paiement</h2>
+        <h3 class="fs-subtitle">Etape 4</h3>
+          <label>Prix Total <span id="prix">0 TND</span></label>
+          <label>Methode de Paiement</label>
+        <span id="radios">
+          <input type="radio" name="paiement" id="ED-radio" value="edinar"><label for="ED-radio" id="ED-lbl">E - Dinar</label>
+          <input type="radio" name="paiement" id="cash-radio" value="cash"><label for="cash-radio" id="cash-lbl"> Sur Place </label>
+        </span>
+        <input type="hidden" name="prix_total" id="hiddenSpanValue">
+          <span id="credentials">
+            <input type="number" name="num_carte" placeholder="Numéro de carte">
+            <input type="number" name="code-conf" placeholder="code confidentiel">
+          </span>
+          <input type="button" name="previous" class="previous action-button" value="Précédent"/>
+          <input type="submit" class="submit action-button" value="Valider">
+      </fieldset>
+    </form>
+    <script src="../scripts/jquery.min.js"></script>
+    <script src="../scripts/jquery.easing.min.js"></script>
+    <script src="../scripts/forms.js"></script>
+</body>
+
+</html>
